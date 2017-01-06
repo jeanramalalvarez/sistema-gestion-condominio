@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es" 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    
+    <title>Sistema de Gestión de Condominio</title>
+    
+    <h:outputStylesheet library="css" name="estilos.css" />
+    
+    <!-- Bootstrap Core CSS -->
+    <h:outputStylesheet library="css" name="bootstrap.css" />
+
+    <!-- MetisMenu CSS -->
+    <h:outputStylesheet library="css" name="metisMenu.css" />
+
+    <!-- Custom CSS -->
+    <h:outputStylesheet library="css" name="sb-admin-2.css" />
+
+    <!-- Custom Fonts -->
+<!--     <h:outputStylesheet library="css" name="font-awesome.css" /> -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</h:head>
+
+<h:body>
+	
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Ingreso al Sistema</h3>
+                    </div>
+                    <div class="panel-body">
+                    	<h:form id="loginForm" rendered="true" role="form" >
+						<p:growl autoUpdate="true" showDetail="true" showSummary="false" />
+                            <fieldset>
+                                <div class="form-group">
+                                    <p:inputText class="form-control" placeholder="Usuario" name="txtUserName" id="txtUserName" label="Usuario" required="true" value="#{loginController.usuario.coUsua}" />
+                                </div>
+                                <div class="form-group">
+                                    <p:password class="form-control" placeholder="Contraseña" name="txtPassword" id="txtPassword" label="Contraseña" required="true" value="#{loginController.usuario.deCont}" />
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="remember" type="checkbox" value="Recordarme" />Recordarme
+                                    </label>
+                                </div>
+                                <!-- Change this to a button or input when using this as a form -->
+                                <p:commandButton value="Login " class="btn btn-lg btn-success btn-block" update="loginForm" action="#{loginController.login}" validateClient="true"  />
+                            </fieldset>
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+    <!-- jQuery -->
+    <h:outputScript library="js" name="jquery.js" />
+
+    <!-- Bootstrap Core JavaScript -->
+    <h:outputScript library="js" name="bootstrap.js" />
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <h:outputScript library="js" name="metisMenu.js" />
+
+    <!-- Custom Theme JavaScript -->
+    <h:outputScript library="js" name="sb-admin-2.js" />
+
+</h:body>
+</html>

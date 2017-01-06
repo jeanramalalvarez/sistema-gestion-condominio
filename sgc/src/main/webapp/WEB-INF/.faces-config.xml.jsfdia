@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#pages#unsecure#login.xhtml"
+  PATH="/pages/unsecure/login.xhtml" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#pages#unsecure#login.xhtml:0" NAME="item"
+   PATH="/pages/unsecure/login.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="principal::#pages#secure#inicio.xhtml"
+    NAME="output" PATH="/pages/secure/inicio.xhtml"
+    TARGET="rules:#pages#secure#inicio.xhtml" TITLE="principal" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#pages#secure#inicio.xhtml"
+  PATH="/pages/secure/inicio.xhtml" SHAPE="240,33,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#pages#secure#inicio.xhtml:0" NAME="item"
+   PATH="/pages/secure/inicio.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="login::#pages#unsecure#login.xhtml"
+    NAME="output" PATH="/pages/unsecure/login.xhtml"
+    TARGET="rules:#pages#unsecure#login.xhtml" TITLE="login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>

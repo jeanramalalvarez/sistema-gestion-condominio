@@ -1,0 +1,65 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+				xmlns:ui="http://java.sun.com/jsf/facelets"
+				xmlns:h="http://java.sun.com/jsf/html"
+				xmlns:f="http://java.sun.com/jsf/core"
+				xmlns:p="http://primefaces.org/ui"
+				xmlns:sec="http://www.springframework.org/security/tags"
+				template="/pages/layouts/plantilla.xhtml">
+
+	<ui:define name="title"> - Principal</ui:define>
+
+	<ui:define name="headIncludes">
+
+		<script type="text/javascript">
+		function handleMessage(facesMessage) {
+			console.log("handleMessage");
+		}
+		</script>
+
+	</ui:define>
+
+	<ui:define name="notes">
+		<p>
+			Note that in "development" mode you can make changes to flow
+			definitions without the need to restart the server. The development
+			mode is specified in <span class="alt">src/main/webapp/WEB-INF/spring/appServlet/webflow.xml</span>.
+		</p>
+		<hr />
+	</ui:define>
+
+	<ui:define name="content">
+
+		            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Inicio</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+<!-- 		<p:socket channel="/notify" onmessage="handleMessage" /> -->
+		<h:form>
+
+			<p:panel header="All Customers">
+<!-- 				<p:dataTable value="#{loginMB.customerList}" var="customer"> -->
+<!-- 					<p:column headerText="Name">#{customer.customer_name}</p:column> -->
+
+<!-- 				</p:dataTable> -->
+				<p:separator />
+				<sec:authorize access="hasRole('ADMINISTRADOR')">
+					<p:commandButton value="Delete Customer"
+						actionListener="#{loginController.delete}" />
+				</sec:authorize>
+
+				<!-- 			<sec:authorize ifAllGranted="ROLE_USER, ROLE_ANDROID_USER"> -->
+				<!-- 			Lorem ipsum dolor sit amet -->
+				<!-- 		</sec:authorize> -->
+
+
+			</p:panel>
+
+			<p:commandButton value="Logout" action="#{loginController.logout}" />
+			
+		</h:form>
+
+	</ui:define>
+</ui:composition>

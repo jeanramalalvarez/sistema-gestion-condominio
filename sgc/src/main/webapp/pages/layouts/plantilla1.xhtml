@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es" 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+<!-- 	<link rel="stylesheet" href="${request.contextPath}/app/resources/styles/blueprint/screen.css" type="text/css" media="screen, projection" /> -->
+<!-- 	<link rel="stylesheet" href="${request.contextPath}/app/resources/styles/blueprint/print.css" type="text/css" media="print" /> -->
+	<!--[if lt IE 8]>
+		<link rel="stylesheet" href="${request.servletPath}/styles/blueprint/ie.css" type="text/css" media="screen, projection" />
+	<![endif]-->
+	<ui:insert name="headIncludes"/>
+	<title><ui:insert name="title">Sistema ge Gestión de Condominios</ui:insert></title>
+	<h:outputStylesheet library="css" name="estilos.css" />
+
+	<ui:insert name="css" />
+	<ui:insert name="javascript" />
+</h:head>
+<h:body>
+<p:layout fullPage="true" >
+    <p:layoutUnit position="west" 
+    			  resizable="false" 
+    			  collapsible="false" 
+    			  closable="false" 
+    			  size="250" 
+    			  minSize="250" 
+    			  maxSize="250" 
+    			  style="height: 100%;"
+    			  id="leftPanel">
+        <h:form> 
+        <p:growl id="messages" showDetail="true" />
+        Menu
+        
+        <i class="fa fa-building fa-4x"></i>
+        
+ <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+<span class="sr-only">Loading...</span>
+
+<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+<span class="sr-only">Loading...</span>
+
+<i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+<span class="sr-only">Loading...</span>
+
+<i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+<span class="sr-only">Loading...</span>
+
+<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+<span class="sr-only">Loading...</span>
+
+
+<span class="fa-stack fa-lg">
+  <i class="fa fa-square-o fa-stack-2x"></i>
+  <i class="fa fa-twitter fa-stack-1x"></i>
+</span>
+fa-twitter on fa-square-o<br />
+<span class="fa-stack fa-lg">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
+</span>
+fa-flag on fa-circle<br />
+<span class="fa-stack fa-lg">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+</span>
+fa-terminal on fa-square<br />
+<span class="fa-stack fa-lg">
+  <i class="fa fa-camera fa-stack-1x"></i>
+  <i class="fa fa-ban fa-stack-2x text-danger"></i>
+</span>
+fa-ban on fa-camera
+
+    <a class="btn btn-lg btn-success" href="#">
+  <i class="fa fa-flag fa-2x pull-left"></i> Font Awesome<br />Version 4.7.0</a>
+    
+        
+        <p:megaMenu orientation="vertical" style="margin-top:90px">
+    <p:submenu label="Condominio" icon="fa fa-building fa-1x" >
+        <p:column>
+            <p:submenu label="TV.1">
+                <p:menuitem value="TV.1.1" url="#" />
+                <p:menuitem value="TV.1.2" url="#" />
+            </p:submenu>
+            <p:submenu label="TV.2">
+                <p:menuitem value="TV.2.1" url="#" />
+                <p:menuitem value="TV.2.2" url="#" />
+                <p:menuitem value="TV.2.3" url="#" />
+            </p:submenu>
+        </p:column>
+    </p:submenu>
+    </p:megaMenu>
+    
+        </h:form>
+    </p:layoutUnit>
+
+    <p:layoutUnit position="center">
+        <div class="container">
+			<div>
+				<h1>SGC</h1>
+				<h3 class="alt">
+					<ui:insert name="title"/>
+				</h3>
+				<hr/>
+			</div>
+			<div>	
+				<ui:insert name="notes"/>
+			</div>
+			<div>
+				<ui:insert name="content"/>
+			</div>
+		</div>
+    </p:layoutUnit>
+</p:layout>
+<h:outputScript library="js" name="scripts.js" />
+</h:body>
+</f:view>
+</html>
