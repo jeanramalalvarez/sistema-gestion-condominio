@@ -18,11 +18,11 @@ public class SeguridadService {
 	private SeguridadDao seguridadDao;
 	
 	public GcTabMstSegUsua buscarUsuarioPorCodigoUsuario(Map<String, Object> parametros){
-		return seguridadDao.obtenerUsuario("buscarUsuarioPorCodigoUsuario", parametros);
+		return seguridadDao.buscar("buscarUsuarioPorCodigoUsuario", parametros);
 	}
 	
 	public List<GcTabMstSegOpcn> buscarOpcionPorOpcionPadre(Map<String, Object> parametros){
-		return seguridadDao.obtenerListaOpcion("buscarOpcionPorOpcionPadre", parametros);
+		return seguridadDao.buscarLista("buscarOpcionPorOpcionPadre", parametros);
 	}
 
 }

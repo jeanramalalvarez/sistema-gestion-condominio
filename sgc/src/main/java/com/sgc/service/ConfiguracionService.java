@@ -16,12 +16,12 @@ public class ConfiguracionService {
 	@Inject
 	private ConfiguracionDao configuracionDao;
 	
-//	public GcTabMstSegUsua buscarUsuarioPorCodigoUsuario(Map<String, Object> parametros){
-//		return seguridadDao.obtenerUsuario("buscarUsuarioPorCodigoUsuario", parametros);
-//	}
+	public GcTabMstUtlPara buscarUsuarioPorCodigoUsuario(Map<String, Object> parametros){
+		return configuracionDao.buscar("buscarUsuarioPorCodigoUsuario", parametros);
+	}
 	
 	public List<GcTabMstUtlPara> obtenerListaParametro(Map<String, Object> parametros){
-		return configuracionDao.obtenerListaParametro("buscarParametroPorCodigoGrupo", parametros);
+		return configuracionDao.buscarLista("buscarParametroPorCodigoGrupo", parametros);
 	}
 
 }
