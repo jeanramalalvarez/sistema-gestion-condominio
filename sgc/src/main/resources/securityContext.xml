@@ -50,16 +50,8 @@
 	<sec:authentication-manager alias="authenticationManager">
 		<sec:authentication-provider user-service-ref="userLoginService">
 			<sec:password-encoder hash="plaintext" />
-		</sec:authentication-provider>
-<!-- 		<security:authentication-provider> -->
 <!-- 			<security:password-encoder hash="md5" /> -->
-<!-- 			<security:user-service> -->
-<!-- 				<security:user name="joe" password="bf403351dfb2ae819874163aff25a49c"  -->
-<!-- 					authorities="ROLE_USER, ROLE_APPLE_USER" /> -->
-<!-- 				<security:user name="pete" password="5d2ea1f70185e4357183bb9c00187219"  -->
-<!-- 					authorities="ROLE_USER, ROLE_ANDROID_USER" /> -->
-<!-- 			</security:user-service> -->
-<!-- 		</security:authentication-provider> -->
+		</sec:authentication-provider>
 	</sec:authentication-manager>
 
 </beans>

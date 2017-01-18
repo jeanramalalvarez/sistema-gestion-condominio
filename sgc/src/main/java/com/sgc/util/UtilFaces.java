@@ -1,13 +1,5 @@
 package com.sgc.util;
 
-/**
- * Clase utilitaria de Java Server Faces.
- * @author Jean Ramal Alvarez
- * @since 06 December 2016
- * @version 1.0
- *
- */
-
 import java.io.IOException;
 import java.text.MessageFormat;
 import java.util.List;
@@ -27,7 +19,7 @@ import org.primefaces.context.RequestContext;
 import org.primefaces.push.EventBus;
 import org.primefaces.push.EventBusFactory;
 
-public class FacesUtil {
+public class UtilFaces {
 	
 	public static void addMessage(Constantes type, String title, String message){
     	if (type == Constantes.INFO){

@@ -18,7 +18,7 @@ import com.sgc.bean.UserPrincipal;
 import com.sgc.domain.GcTabMstSegUsua;
 import com.sgc.service.ServiceFactory;
 import com.sgc.util.Constantes;
-import com.sgc.util.FacesUtil;
+import com.sgc.util.UtilFaces;
 
 @Named
 @SessionScoped
@@ -53,7 +53,7 @@ public class LoginController implements Serializable {
 			return "principal";
 		} catch (Exception e) {
 			logger.error("Error logger in " + e.getMessage());
-			FacesUtil.addMessage(Constantes.ERROR, null, "Credenciales incorrectos. Intenta nuevamente");
+			UtilFaces.addMessage(Constantes.ERROR, null, "Credenciales incorrectos. Intenta nuevamente");
 			//FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_FATAL, "Login invalido", "Credenciales incorrectos. Intenta nuevamente"));
 		}
 

@@ -7,10 +7,10 @@ import org.springframework.stereotype.Repository;
 
 import com.sgc.domain.GcTabMstSegOpcn;
 import com.sgc.domain.GcTabMstSegUsua;
-import com.sgc.util.JpaUtil;
+import com.sgc.util.UtilJpa;
 
 @Repository
-public class SeguridadDao extends JpaUtil{
+public class SeguridadDao extends UtilJpa{
 	
 	public GcTabMstSegUsua obtenerUsuario(String query, Map<String, Object> parametros){
 		return namedQuerySingleRresult(query, parametros);

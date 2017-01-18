@@ -6,10 +6,10 @@ import java.util.Map;
 import org.springframework.stereotype.Repository;
 
 import com.sgc.domain.GcTabMstUtlPara;
-import com.sgc.util.JpaUtil;
+import com.sgc.util.UtilJpa;
 
 @Repository
-public class ConfiguracionDao extends JpaUtil{
+public class ConfiguracionDao extends UtilJpa{
 	
 //	public GcTabMstUtlPara obtenerParametro(String query, Map<String, Object> parametros){
 //		return namedQuerySingleRresult(query, parametros);

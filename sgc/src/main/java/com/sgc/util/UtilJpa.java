@@ -8,7 +8,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 @SuppressWarnings("unchecked")
-public class JpaUtil {
+public class UtilJpa {
 	
 	@PersistenceContext
 	private EntityManager entityManager;
