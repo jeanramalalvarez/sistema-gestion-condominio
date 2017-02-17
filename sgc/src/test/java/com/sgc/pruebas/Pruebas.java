@@ -20,7 +20,7 @@ public class Pruebas extends AbstractBaseUnitTest {
 	@Autowired
 	ServiceFactory serviceFactory;
 
-	@Test
+	//@Test
 	public void obtenerListaParametro() throws Exception {
 		Map<String, Object> parametros = new HashMap<String, Object>();
 		parametros.put("coPara", null);
@@ -31,7 +31,7 @@ public class Pruebas extends AbstractBaseUnitTest {
 		}
 	}
 	
-	//@Test
+	@Test
 	public void buscarUsuarioPorCodigoUsuario() throws Exception {
 		Map<String, Object> parametros = new HashMap<String, Object>();
 		parametros.put("coUsua", "admin");

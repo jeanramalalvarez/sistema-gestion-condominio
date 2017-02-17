@@ -1,5 +1,7 @@
 body {
 	background-color: #FFFFFF;
+	color: #73879C !important;
+	font-family: "Helvetica Neue",Roboto,Arial,"Droid Sans",sans-serif !important;
 }
 
 .ui-layout-north {

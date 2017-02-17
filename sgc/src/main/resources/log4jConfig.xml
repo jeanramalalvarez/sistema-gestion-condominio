@@ -13,7 +13,7 @@
 	<!-- org.apache.log4j.RollingFileAppender -->
 	<appender name="archivo" class="org.apache.log4j.DailyRollingFileAppender">
 		<param name="Append" value="true" />
- 		<param name="File" value="D:\\PROYECTOS/Condominio/sgc/sgc.log" />
+ 		<param name="File" value="E:\\jean/LOGS/sgc.log" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern"
 				value="[%d{ISO8601}]%5p %C.%M(%F:%L) - %m%n" />

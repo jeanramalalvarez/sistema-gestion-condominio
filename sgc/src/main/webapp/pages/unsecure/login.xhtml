@@ -1,88 +1,113 @@
 <!DOCTYPE html>
-<html lang="es" 
+<html lang="en" 
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html">
 <h:head>
-
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+
+    <title>Gentelella Alela! | </title>
+
+    <!-- Bootstrap -->
+    <h:outputStylesheet name="gentelella/bootstrap/dist/css/bootstrap.min.css" />
     
-    <title>Sistema de Gestión de Condominio</title>
+    <!-- Font Awesome -->
+    <h:outputStylesheet name="gentelella/font-awesome/css/font-awesome.min.css" />
     
-    <h:outputStylesheet library="css" name="estilos.css" />
+    <!-- NProgress -->
+    <h:outputStylesheet name="gentelella/nprogress/nprogress.css" />
     
-    <!-- Bootstrap Core CSS -->
-    <h:outputStylesheet library="css" name="bootstrap.css" />
-
-    <!-- MetisMenu CSS -->
-    <h:outputStylesheet library="css" name="metisMenu.css" />
-
-    <!-- Custom CSS -->
-    <h:outputStylesheet library="css" name="sb-admin-2.css" />
-
-    <!-- Custom Fonts -->
-<!--     <h:outputStylesheet library="css" name="font-awesome.css" /> -->
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <!-- Animate.css -->
+    <h:outputStylesheet name="gentelella/animate.css/animate.min.css" />
+    
+    <!-- Custom Theme Style -->
+    <h:outputStylesheet name="gentelella/build/css/custom.min.css" />
 </h:head>
+<h:body class="login">
+    <div>
+      <a class="hiddenanchor" id="signup"></a>
+      <a class="hiddenanchor" id="signin"></a>
 
-<h:body>
-	
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <div class="login-panel panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Ingreso al Sistema</h3>
-                    </div>
-                    <div class="panel-body">
-                    	<h:form id="loginForm" rendered="true" role="form" >
-						<p:growl autoUpdate="true" showDetail="true" showSummary="false" />
-                            <fieldset>
-                                <div class="form-group">
-                                    <p:inputText class="form-control" placeholder="Usuario" name="txtUserName" id="txtUserName" label="Usuario" required="true" value="#{loginController.usuario.coUsua}" />
-                                </div>
-                                <div class="form-group">
-                                    <p:password class="form-control" placeholder="Contraseña" name="txtPassword" id="txtPassword" label="Contraseña" required="true" value="#{loginController.usuario.deCont}" />
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input name="remember" type="checkbox" value="Recordarme" />Recordarme
-                                    </label>
-                                </div>
-                                <!-- Change this to a button or input when using this as a form -->
-                                <p:commandButton value="Login " class="btn btn-lg btn-success btn-block" update="loginForm" action="#{loginController.login}" validateClient="true"  />
-                            </fieldset>
-                        </h:form>
-                    </div>
+      <div class="login_wrapper">
+        <div class="animate form login_form">
+          <section class="login_content">
+            <h:form id="loginForm" rendered="true" role="form" >
+            <p:growl autoUpdate="true" showDetail="true" showSummary="false" />
+              <h1>Login Form</h1>
+              <div>
+                <p:inputText class="form-control" placeholder="Usuario" name="txtUserName" id="txtUserName" label="Usuario" required="true" value="#{loginController.usuario.coUsua}" />
+              </div>
+              <div>
+                <p:password class="form-control" placeholder="Contraseña" name="txtPassword" id="txtPassword" label="Contraseña" required="true" value="#{loginController.usuario.deCont}" />
+              </div>
+              <div>
+                <p:commandButton value="Login " class="btn btn-default submit" update="loginForm" action="#{loginController.login}" validateClient="true"  />
+                <a class="reset_pass" href="#">Lost your password?</a>
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="separator">
+                <p class="change_link">New to site?
+                  <a href="#signup" class="to_register"> Create Account </a>
+                </p>
+
+                <div class="clearfix"></div>
+                <br />
+
+                <div>
+                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
                 </div>
-            </div>
+              </div>
+            </h:form>
+          </section>
         </div>
+
+        <div id="register" class="animate form registration_form">
+          <section class="login_content">
+            <form>
+              <h1>Create Account</h1>
+              <div>
+                <input type="text" class="form-control" placeholder="Username" required="" />
+              </div>
+              <div>
+                <input type="email" class="form-control" placeholder="Email" required="" />
+              </div>
+              <div>
+                <input type="password" class="form-control" placeholder="Password" required="" />
+              </div>
+              <div>
+                <a class="btn btn-default submit" href="index.html">Submit</a>
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="separator">
+                <p class="change_link">Already a member ?
+                  <a href="#signin" class="to_register"> Log in </a>
+                </p>
+
+                <div class="clearfix"></div>
+                <br />
+
+                <div>
+                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
     </div>
-	
-    <!-- jQuery -->
-    <h:outputScript library="js" name="jquery.js" />
-
-    <!-- Bootstrap Core JavaScript -->
-    <h:outputScript library="js" name="bootstrap.js" />
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <h:outputScript library="js" name="metisMenu.js" />
-
-    <!-- Custom Theme JavaScript -->
-    <h:outputScript library="js" name="sb-admin-2.js" />
-
 </h:body>
+</f:view>
 </html>

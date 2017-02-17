@@ -29,25 +29,35 @@
 
 	<ui:define name="content">
 
-		            <div class="row">
+		    <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Inicio</h1>
                 </div>
-                <!-- /.col-lg-12 -->
             </div>
 
 <!-- 		<p:socket channel="/notify" onmessage="handleMessage" /> -->
 		<h:form>
 
-			<p:panel header="All Customers">
+			<p:panel>
+			
+				<div class="row x_title">
+                  <div class="col-md-6">
+                    <h3>All Customers <small>Graph title sub-title</small></h3>
+                  </div>
+                </div>
+                
+                aa
+
+                <div class="clearfix"></div>
+			
 <!-- 				<p:dataTable value="#{loginMB.customerList}" var="customer"> -->
 <!-- 					<p:column headerText="Name">#{customer.customer_name}</p:column> -->
 
 <!-- 				</p:dataTable> -->
-				<p:separator />
+<!-- 				<p:separator /> -->
 				<sec:authorize access="hasRole('ADMINISTRADOR')">
 					<p:commandButton value="Delete Customer"
-						actionListener="#{loginController.delete}" />
+									 actionListener="#{loginController.delete}" />
 				</sec:authorize>
 
 				<!-- 			<sec:authorize ifAllGranted="ROLE_USER, ROLE_ANDROID_USER"> -->
@@ -56,8 +66,27 @@
 
 
 			</p:panel>
+		
 
-			<p:commandButton value="Logout" action="#{loginController.logout}" />
+			<p:commandButton value="Logout" action="#{loginController.logout}" styleClass="btn btn-default submit" />
+			
+			          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="dashboard_graph">
+
+                <div class="row x_title">
+                  <div class="col-md-6">
+                    <h3>Network Activities <small>Graph title sub-title</small></h3>
+                  </div>
+                </div>
+                
+                aa
+
+                <div class="clearfix"></div>
+              </div>
+            </div>
+
+          </div>
 			
 		</h:form>
 
